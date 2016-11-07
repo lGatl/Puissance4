@@ -3,3 +3,18 @@
 
 }
 
+.body {
+	height:500px ;
+	width:500px;
+
+}
+
+h1{
+color:green;
+font-size: 50px;
+}
+
+.dc{
+	width:3em;
+	height: 3em;
+}
