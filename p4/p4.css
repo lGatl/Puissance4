@@ -4,7 +4,7 @@
 }
 
 .body {
-	height:500px ;
+	height:500px;
 	width:500px;
 	background-color: #ddd;
 }
@@ -24,12 +24,26 @@ font-size: 50px;
 	 border-collapse: collapse;
 }
 
-.t{
+.titre tr{
+
 	margin: 0;
 	padding: 0;
 	width:100%;
 	height:3.8em;
 	
+}
+.t{
+	width:100%;
+	height:3.8em;
+
+}
+#jet{
+	position: fixed;
+	width:3.8em;
+	height: 3.8em;
+
+	background: url("bleu.png") no-repeat;
+	background-size: 100%;
 }
 
 .t:hover{
