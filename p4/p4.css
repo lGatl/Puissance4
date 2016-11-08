@@ -37,4 +37,18 @@ font-size: 50px;
 	background-size: 100%;
 }
 
+.jeton{
+	
+	position: absolute;
+	top:0;
+	left: 0;
+	width: 3.8em;
+	height: 3.8em;
+	background: url("rouge.png") no-repeat;
+	background-size: 100%;
+	display: none;
+
+}
+
+
 
