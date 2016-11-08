@@ -15,5 +15,4 @@
 }*/
 /*
 element.onclick = function(e) { // L'argument « e » va récupérer une référence vers l'objet « Event »
-    alert(e.type); // Ceci affiche le type de l'événement (click, mouseover, etc.)
-}*/;
+    alert
