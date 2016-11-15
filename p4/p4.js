@@ -148,8 +148,8 @@ ta[0].style.backgroundSize="100%"
 
 
 function testgn(tab){
-	/*verti(tab)*/
-	/*horz(tab)*/
+	verti(tab)
+	horz(tab)
 	 /*diagdr(tab)*/
 }
 /*function diagdr(tab){
