@@ -4,12 +4,16 @@
 }
 
 .body {
+	margin: 0;
+	padding: 0;
 	height:500px ;
 	width:500px;
 	background-color: #ddd;
 }
 
 h1{
+	text-align: center;
+display: block;
 color:green;
 font-size: 50px;
 }
@@ -25,17 +29,25 @@ font-size: 50px;
 }
 
 .t{
+
 	margin: 0;
 	padding: 0;
 	width:100%;
 	height:3.8em;
+	background-color: #ddd;	
+	
 	
 }
-
-.t:hover{
-	background: url("rouge.png") no-repeat;
+.ti{
+	margin: 0;
+	padding: 0;
+	width:100%;
+	height:100%;
+	display: none;
 	background-size: 100%;
 }
+
+
 
 .jeton{
 	
