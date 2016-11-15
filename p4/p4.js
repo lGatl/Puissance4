@@ -109,7 +109,7 @@ $(".ti").click(function(){
 		/*appelle la fonction jets*/
 		jets(thi)
 		/*anime le jeton animé*/
-		$(".jeton").animate({top:t+(lig+1)*larbo/8},0,function(){
+		$(".jeton").animate({top:t+(lig+1)*larbo/8},1000,function(){
 			/*reactive si animation terminee*/
 				
 				jeth(ta,thi);
