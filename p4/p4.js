@@ -104,8 +104,9 @@ $(".ti").click(function(){
 			/*reactive si animation terminee*/
 				jeth(ta,thi);
 				changj(xi);
-				cd=true
+
 				testgn(tab)
+				cd=true
 		});
 	}
 
@@ -161,7 +162,8 @@ function diagga(tab){
 
 	while(j>=0&&puis1<3&&puis2<3){
 		i=7
-		while((i-1)>=0&&(j-(7-i))>=0&&i>=1&&puis1<3&&puis2<3){
+		while((j-(7-i))>=1&&i>=1&&puis1<3&&puis2<3){
+			c((j-(7-i)-1))
 			if(tab[j-(7-i)][i]==1&&tab[j-(7-i)-1][i-1]==1){
 				puis1++
 				puis2=0
