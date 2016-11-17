@@ -100,7 +100,7 @@ $(".ti").click(function(){
 		/*appelle la fonction jets*/
 		jets(thi)
 		/*anime le jeton animé*/
-		$(".jeton").animate({top:t+(lig+1)*larbo/8},20,function(){
+		$(".jeton").animate({top:t+(lig+1)*larbo/8},1000,function(){
 			/*reactive si animation terminee*/
 				jeth(ta,thi);
 				changj(xi);
@@ -131,10 +131,10 @@ ta[0].style.backgroundSize="100%"
 
 
 function testgn(tab){
-verti(tab)
-horz(tab)
-diagdr(tab)
-diagga(tab)
+	verti(tab)
+	horz(tab)
+	diagdr(tab)
+	diagga(tab)
 }
 function diagga(tab){
 	puis1=0
@@ -161,7 +161,7 @@ function diagga(tab){
 
 	while(j>=0&&puis1<3&&puis2<3){
 		i=7
-		while((j-(7-i))>=0&&i>=1&&puis1<3&&puis2<3){
+		while((i-1)>=0&&(j-(7-i))>=0&&i>=1&&puis1<3&&puis2<3){
 			if(tab[j-(7-i)][i]==1&&tab[j-(7-i)-1][i-1]==1){
 				puis1++
 				puis2=0
@@ -283,6 +283,7 @@ function verti(tab){
 function gagn(j){
 
 	alert("j"+j+" gagné")
+	location.reload()
 }
 
 
