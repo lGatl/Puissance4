@@ -59,27 +59,19 @@ function cherchlig(tabl,colo){
 }
 
 $(".t").hover(function(){if(cd){
-	col=cherchcol($(this))+1
+		col=$(this)[0].id
 
 				$("#ti"+col).show()
 			}},function(){if(cd){
-	col=cherchcol($(this))+1
+	col=$(this)[0].id
 			$("#ti"+col).hide()
 		}});
 
 
 function cherchcol(thi){
-			/*	je met $("this") en variable*/
-		/*largeur hauteur du body en variable*/
-		larbo=$(".body").width();
-		haubo=$(".body").height();
-		/*position de la case cliquée en variable*/
-		t=thi.position().top;
-		l=thi.position().left;
-		/*retrouve la colonne cliquée en fonction de
-		la largrue du body et de la position left du cliqué*/
-		col=Math.round(l/(larbo/8),1)
 
+		col=(thi[0].id).split("")[2]
+		console.log(col)
 		return col
 }
 
@@ -89,6 +81,12 @@ $(".ti").click(function(){
 		cd=false
 		thi=$(this)
 		col=cherchcol(thi)
+				larbo=$(".body").width();
+		haubo=$(".body").height();
+		/*position de la case cliquée en variable*/
+		t=thi.position().top;
+		l=thi.position().left;
+		/*retrouve la colonne cliq
 		/*appelle la fonction cherchlig sur la colonne cliquée*/
 		lig=cherchlig(tab,col)
 		tab[col][lig]=jo.xi
@@ -132,65 +130,98 @@ ta[0].style.backgroundSize="100%"
 
 
 function testgn(tab){
+	console.clear()
+	c(tab)
 	verti(tab)
 	horz(tab)
-	diagdr(tab)
-	diagga(tab)
+	diagdr(tab)  //     \\\\\\\\\\\_
+	diagga(tab)			//      ///////////
 }
-function diagga(tab){
+
+
+function diagga(tab){// //////////////////s
+
 	puis1=0
 	puis2=0
-	i=7
-	j=7
-	while(j>=0&&puis1<3&&puis2<3){
-		i=7
-		while((j-(7-i))>=0&&i>=1&&puis1<3&&puis2<3){
-			if(tab[i][j-(7-i)]==1&&tab[i-1][j-(7-i)-1]==1){
-				puis1++
-				puis2=0
-			}else{puis1=0}
-			if(tab[i][j-(7-i)]==2&&tab[i-1][j-(7-i)-1]==2){
-				puis2++
-				puis1=0
-			}else{puis2=0}
-			i--
-		}
-		j--
-	}
-	i=7
-	j=7
+	i=0
+	j=0
 
-	while(j>=0&&puis1<3&&puis2<3){
-		i=7
-		while((j-(7-i))>=1&&i>=1&&puis1<3&&puis2<3){
-			c((j-(7-i)-1))
-			if(tab[j-(7-i)][i]==1&&tab[j-(7-i)-1][i-1]==1){
+	while(j<=7&&puis1<3&&puis2<3){
+
+		puis1=0
+		puis2=0
+		i=0
+		while(j+i<=6&&i<=7&&puis1<3&&puis2<3){
+				console.log((i)+" "+(7-j-i))
+				console.log((i+1)+" "+(7-j-i-1))
+			if(tab[i][7-j-i]==1&&tab[i+1][7-j-i-1]==1){
 				puis1++
 				puis2=0
+				c("rezrezrezre"+puis1)
 			}else{puis1=0}
-			if(tab[j-(7-i)][i]==2&&tab[j-(7-i)-1][i-1]==2){
+			if(tab[i][7-j-i]==2&&tab[i+1][7-j-i-1]==2){
 				puis2++
 				puis1=0
+				c("rezrezrezre"+puis2)
 			}else{puis2=0}
-			i--
+			i++
 		}
-		j--
+		j++
 	}
+	i=0
+	j=0
+
+	/*===============================================*/
+	/*&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&*/
+	/*\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
+puis1=0
+	puis2=0
+	i=0
+	j=0
+	while(j<=7&&puis1<3&&puis2<3){
+		puis1=0
+		puis2=0
+		i=0
+		while(j+i<=6&&i<=7&&puis1<3&&puis2<3){
+				console.log((i+j)+" "+(7-i))
+				console.log((i+j+1)+" "+(7-i-1))
+			if(tab[i+j][7-i]==1&&tab[i+j+1][7-i-1]==1){
+				puis1++
+				puis2=0
+				c("rezrezrezre"+puis1)
+			}else{puis1=0}
+			if(tab[i+j][7-i]==2&&tab[i+j+1][7-i-1]==2){
+				puis2++
+				puis1=0
+				c("rezrezrezre"+puis2)
+			}else{puis2=0}
+			i++
+		}
+		j++
+	}
+	i=0
+	j=0
+
 
 	if(puis1==3){gagn(1)}
 	if(puis2==3){gagn(2)}
 }
 
-function diagdr(tab){
+
+function diagdr(tab){ // \\\\\\\\\\\\\\\\\\\\
+
 	puis1=0
 	puis2=0
 	i=0
 	j=0
 	while(j<=4&&puis1<3&&puis2<3){
+
 		puis1=0
 		puis2=0
 		i=0
 		while(j+i<=6&&i<=7&&puis1<3&&puis2<3){
+						console.log((7-j-i)+" "+(i))
+				console.log((7-j-i-1)+" "+(i+1))
 			if(tab[i][j+i]==1&&tab[i+1][j+i+1]==1){
 				puis1++
 				puis2=0
